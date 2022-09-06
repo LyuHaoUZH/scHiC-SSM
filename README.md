@@ -7,7 +7,7 @@ Single-cell Hi-C (scHi-C) profiles the chromatin three-dimensional (3D) landscap
 
 ## 2. Environment setup
 We recommend you to create virtual environments by [anaconda](https://docs.anaconda.com/anaconda/install/linux/). Also, make sure you have an NVIDIA GPU with Linux x86_64 Driver Version >= 470.103.01 (compatible with CUDA Version 11.3) if you want to accelarate training process.
-#### 2.1 Install by Conda
+#### 2.1 Install by conda
 
 ```powershell
 git clone https://github.com/LyuHaoUZH/scHiC-SSM
