@@ -1,0 +1,12 @@
+name: scHiC-SSM
+channels:
+  - conda-forge
+  - anaconda
+  - bioconda
+  - defaults
+dependencies:
+  - pandas==1.1.3
+  - scanpy==1.8.2
+  - scvi-tools==0.16.1
+  - matplotlib==3.5.1
+  - phate==1.0.7
