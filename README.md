@@ -38,10 +38,10 @@ export INPUT_FILE=demo_data
 export OUTPUT_FILE=test_result
 export CELL_SUMMARY_FILE=supplementary_info/Li2019_Summary.txt
 export GENOME_FILE=genome_info/hg19.chrom.sizes
-export BAND=10
+export BAND=10 #Maximum genomic distance to be processed, a range of 10-100 is recommended.
 export CHROMOSOME="chr1"
 export RESOLUTION=1000000
-export LATENT=10
+export LATENT=10 #Dimension of latent space, a range of 10-100 is recommended.
 export CPUNUM=10
 
 python scHiC-SSM.py \
