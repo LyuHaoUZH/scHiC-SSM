@@ -363,7 +363,7 @@ if __name__ == "__main__":
     else:
         latentCombinedNormCounts = Parallel(n_jobs=coreN,backend='multiprocessing')(delayed(normalize)(bandM, cellInfo, chromSelect, bandDist, nLatent, batchFlag, gpuFlag) for bandM, chromSelect, bandDist in bandMiter)
         #print(res)
-    with open(outdir + '/pickle/scHiC-SSM_Lee2019_scvi_scanvi_version_latent10_100seeds_50semi_10Band', 'wb') as f:
+    with open(outdir + '/pickle/scHiC-SSM_latentEmbeddings', 'wb') as f:
         pickle.dump(latentCombinedNormCounts, f)
     print("Writing out latent embeddings.")
     if not os.path.exists(outdir + '/normalization'):
@@ -386,5 +386,5 @@ if __name__ == "__main__":
             cellDf["binA"] = cellDf["binA"] * resolution
             cellDf["binB"] = cellDf["binB"] * resolution
             cellDf.drop(columns=['cellID']).to_csv(fname, sep='\t', header=False, index=False, mode='a')
-    runningTimeFile = open('scHiC-SSM_running_time_Lee2019_scvi_scanvi_version_10latent_100seeds_50semi_10Band.txt','w')
+    runningTimeFile = open('scHiC-SSM_running_time.txt','w')
     runningTimeFile.write('Total time: %d seconds.' % int(time() - t0))
