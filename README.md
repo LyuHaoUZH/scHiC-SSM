@@ -43,6 +43,7 @@ export CHROMOSOME="chr1"
 export RESOLUTION=1000000 #Resolution of scHi-C data.
 export LATENT=10 #Dimension of latent space, a range of 10-100 is recommended.
 export CPUNUM=10 #Number of CPUs to be used for parallel running.
+export gpuFlag #(*selected) Use GPU or not. Default is False. Adding '-gpu' to turn it on.
 
 python scHiC-SSM.py \
     --inPath INPUT_FOLDER \
@@ -55,6 +56,7 @@ python scHiC-SSM.py \
     --nLatent LATENT \
     --parallelCPU CPUNUM \
     --verbose
+    -gpu (*selected)
 ```
 ## 4. Data access
 Users can acquire [data](https://drive.google.com/drive/folders/1fcq1gKC1OO89tFd3bEEtAWgnveJesSyG?usp=sharing%20Dependencies) or extend scHiC-SSM to their own datasets.
