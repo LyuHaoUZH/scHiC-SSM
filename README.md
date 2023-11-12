@@ -45,8 +45,8 @@ export LATENT=10
 export CPUNUM=10
 
 python scHiC-SSM.py \
-    --inPath INPUT_FILE \
-    --outdir OUTPUT_FILE \
+    --inPath INPUT_FOLDER \
+    --outdir OUTPUT_FOLDER \
     --cellSummary CELL_SUMMARY_FILE \
     --genome GENOME_FILE \
     --bandMax BAND \
