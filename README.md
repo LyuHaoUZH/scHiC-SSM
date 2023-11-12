@@ -40,9 +40,9 @@ export CELL_SUMMARY_FILE=supplementary_info/Li2019_Summary.txt
 export GENOME_FILE=genome_info/hg19.chrom.sizes
 export BAND=10 #Maximum genomic distance to be processed, a range of 10-100 is recommended.
 export CHROMOSOME="chr1"
-export RESOLUTION=1000000
+export RESOLUTION=1000000 #Resolution of scHi-C data.
 export LATENT=10 #Dimension of latent space, a range of 10-100 is recommended.
-export CPUNUM=10
+export CPUNUM=10 #Number of CPUs to be used for parallel running.
 
 python scHiC-SSM.py \
     --inPath INPUT_FOLDER \
