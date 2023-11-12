@@ -3,7 +3,7 @@
 ## 1. What is scHiC-SSM?
 
 Single-cell Hi-C (scHi-C) profiles the chromatin three-dimensional (3D) conformation at single cell resolution, thus revealing genomic interactions with potential impact in regulating cell identities. However, high dimensionality and sparsity of scHi-C data often complicate the analysis. Here, we introduce a method, scHiC-SSM, for embedding scHi-C data that combines a semi-supervised deep generative model to learn latent features that accurately characterize scHi-C data. scHiC-SSM outperforms other tools in typical aspects of scHi-C data analysis, including cell embedding and cell type clustering on four independent scHi-C datasets. Taken together, scHiC-SSM represents a powerful tool to facilitate the study of 3D chromatin organization.
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7c298d757dd442a6ae7000a3a8b0bbcc.png#pic_center)
+![image](https://github.com/LyuHaoUZH/scHiC-SSM/blob/main/img/flowchart.png)
 
 ## 2. Environment setup
 We recommend you to create virtual environments by [anaconda](https://docs.anaconda.com/anaconda/install/linux/). Also, make sure you have an NVIDIA GPU with Linux x86_64 Driver Version >= 470.103.01 (compatible with CUDA Version 11.3) if you want to accelarate training process.
