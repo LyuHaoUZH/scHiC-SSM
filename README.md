@@ -13,7 +13,6 @@ We recommend you to create virtual environments by [anaconda](https://docs.anaco
 ```powershell
 git clone https://github.com/LyuHaoUZH/scHiC-SSM
 conda env create -f scHiC-SSM_conda_environment.yml
-conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
 ```
 #### 2.2 Install by pip
 Alternatively, you can install the package by pip.
@@ -21,6 +20,13 @@ Alternatively, you can install the package by pip.
 ```powershell
 git clone https://github.com/LyuHaoUZH/scHiC-SSM
 pip install -r python-requirements.txt
+```
+It is recommended to have pytorch installed after installing scHiC-SSM by using Conda:
+```powershell
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+```
+Or pip:
+```powershell
 pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
 ```
 ## 3. Model training
