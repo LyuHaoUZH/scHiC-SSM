@@ -368,5 +368,23 @@ if __name__ == "__main__":
     print("Writing out latent embeddings.")
     if not os.path.exists(outdir + '/normalization'):
         os.mkdir(outdir + '/normalization')
+    i = 0
+    for cellId, cellDf in res[i][1].groupby('cellID'):
+            fname = outdir + '/normalization/' + cells[int(cellId)].split('/')[-1]
+            if os.path.exists(fname):
+                os.remove(fname)
+            cellDf["binA"] = cellDf["binA"] * resolution ## add back the resolution
+            cellDf["binB"] = cellDf["binB"] * resolution
+            cellDf.drop(columns=['cellID']).to_csv(fname, sep='\t', header=False, index=False, mode='a')
+    
+    print('Writing out normalization count.')
+    for i in range(1, len(res)):
+        if res[i][1] is None:
+            continue
+        for cellId, cellDf in res[i][1].groupby('cellID'):
+            fname = outdir + '/normalization/' + cells[int(cellId)].split('/')[-1]
+            cellDf["binA"] = cellDf["binA"] * resolution
+            cellDf["binB"] = cellDf["binB"] * resolution
+            cellDf.drop(columns=['cellID']).to_csv(fname, sep='\t', header=False, index=False, mode='a')
     runningTimeFile = open('scHiC-SSM_running_time_Lee2019_scvi_scanvi_version_10latent_100seeds_50semi_10Band.txt','w')
     runningTimeFile.write('Total time: %d seconds.' % int(time() - t0))
