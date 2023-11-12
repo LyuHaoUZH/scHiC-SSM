@@ -55,7 +55,7 @@ python scHiC-SSM.py \
     --resolution RESOLUTION \
     --nLatent LATENT \
     --parallelCPU CPUNUM \
-    --verbose
+    --verbose \
     -gpu (*selected)
 ```
 ## 4. Data access
