@@ -3,6 +3,7 @@
 ## 1. What is scHiC-SSM?
 
 Single-cell Hi-C (scHi-C) profiles the chromatin three-dimensional (3D) conformation at single cell resolution, thus revealing genomic interactions with potential impact in regulating cell identities. However, high dimensionality and sparsity of scHi-C data often complicate the analysis. Here, we introduce a method, scHiC-SSM, for embedding scHi-C data that combines a semi-supervised deep generative model to learn latent features that accurately characterize scHi-C data. scHiC-SSM outperforms other tools in typical aspects of scHi-C data analysis, including cell embedding and cell type clustering on four independent scHi-C datasets. Taken together, scHiC-SSM represents a powerful tool to facilitate the study of 3D chromatin organization.
+
 ![image](https://github.com/LyuHaoUZH/scHiC-SSM/blob/main/img/flowchart.png)
 
 ## 2. Environment setup
