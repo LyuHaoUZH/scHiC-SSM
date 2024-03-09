@@ -8,27 +8,14 @@ Single-cell Hi-C (scHi-C) profiles the chromatin three-dimensional (3D) conforma
 
 ## 2. Environment setup
 We recommend you to create virtual environments by [anaconda](https://docs.anaconda.com/anaconda/install/linux/). Also, make sure you have an NVIDIA GPU with Linux x86_64 Driver Version >= 470.103.01 (compatible with CUDA Version 11.3) if you want to accelarate training process.
-#### 2.1 Install by conda
+#### 2.1 Install by conda and pip
 
 ```powershell
 git clone https://github.com/LyuHaoUZH/scHiC-SSM
-conda env create -f scHiC-SSM_conda_environment.yml
-```
-#### 2.2 Install by pip
-Alternatively, you can install the package by pip.
-
-```powershell
-git clone https://github.com/LyuHaoUZH/scHiC-SSM
+conda create -n your_env_name python=3.8.5
 pip install -r python-requirements.txt
 ```
-It is recommended to have pytorch installed after installing scHiC-SSM by using Conda:
-```powershell
-conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
-```
-Or pip:
-```powershell
-pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
-```
+
 ## 3. Model training
 
 ```powershell
